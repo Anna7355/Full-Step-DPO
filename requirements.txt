@@ -1,0 +1,14 @@
+transformers
+accelerate
+datasets
+omegaconf
+peft
+bitsandbytes
+deepspeed
+vllm
+jsonlines
+numpy
+pandas
+tqdm
+wandb
+python-Levenshtein

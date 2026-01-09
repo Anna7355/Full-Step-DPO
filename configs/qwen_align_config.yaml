@@ -1,0 +1,50 @@
+project_name: qwen_math
+
+run_name: default
+
+ckpt_path: saved_models/aligned_qwen/fullstepdpo.pt
+
+data_path: ./data/train/alignment_train.json
+
+gradient_accumulation: 8
+
+mixed_precision: bf16
+
+policy_model_path: xinlai/Qwen2-7B-SFT
+
+ref_model_path: xinlai/Qwen2-7B-SFT
+
+policy_tokenizer_name: xinlai/Qwen2-7B-SFT
+
+use_grad_ckpt: True
+
+on_policy: False
+
+max_prompt_len: 1024
+
+max_response_len: 2048
+
+batch_size: 1
+
+clip_grad_norm: 1.0
+
+warmup_steps: 50
+
+learning_rate: 5e-7
+
+optimizer: AdamW
+
+loss_type: fullstepdpo
+
+beta: 0.05
+
+token_rate: 1
+
+reward_temp: 0.5
+
+save_per_step: 200
+
+epoch: 1
+
+seed: 888
+
